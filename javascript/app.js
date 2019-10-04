@@ -88,3 +88,6 @@ textForm.addEventListener('submit', e => {
 rate.addEventListener('change', e => rateValue.textContent = rate.value)
 //Pitch value change
 pitch.addEventListener('change', e => pitchValue.textContent = pitch.value)
+
+// Voice select change
+voiceSelect.addEventListener('change', e => speak())
