@@ -46,7 +46,7 @@ const speak = () => {
     }
     if(textInput.value !== '') {
           //Add background gif when speaking
-        body.style.background = '#343a40 url(img/wave.gif';
+        body.style.background = '#141414 url(img/wave.gif';
         body.style.backgroundRepeat = 'repeat-x';
         body.style.backgroundSize = '100% 100%';
         //Get speak text from input
@@ -54,6 +54,7 @@ const speak = () => {
         //Speak end
         speakText.onend = e => {
             console.log('Done speaking...')
+            body.style.background = '#141414'
         }
 
         //Speak Error
