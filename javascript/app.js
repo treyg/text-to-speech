@@ -38,12 +38,17 @@ if(synth.onvoiceschanged !== undefined) {
 
 //Speak
 const speak = () => {
+  
     //Check if speaking
     if(synth.speaking) {
         console.error('Already speaking...')
         return
     }
     if(textInput.value !== '') {
+          //Add background gif when speaking
+        body.style.background = '#343a40 url(img/wave.gif';
+        body.style.backgroundRepeat = 'repeat-x';
+        body.style.backgroundSize = '100% 100%';
         //Get speak text from input
         const speakText = new SpeechSynthesisUtterance(textInput.value)
         //Speak end
